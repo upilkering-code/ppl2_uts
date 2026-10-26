@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Artefak PTK Siklus 1 sampai 4 dalam e-portofolio PPG."><title>Artefak | E-Portofolio PPG</title>
+  <link rel="stylesheet" href="assets/css/style.css"><script src="assets/js/app.js" defer></script><script src="assets/js/artefak.js" defer></script>
+  <style>
+    /* Khusus halaman Artefak: semua siklus tampil dan dapat dituju dari kartu pemilih. */
+    #cycleContent { display: grid; gap: 48px; }
+    #cycleContent .cycle-vault { scroll-margin-top: 110px; }
+    #cycleContent .cycle-vault + .cycle-vault { position: relative; }
+    #cycleContent .cycle-vault + .cycle-vault::before {
+      content: "✦ LANJUT KE TAHAP BERIKUTNYA ✦";
+      position: absolute;
+      top: -33px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px 12px;
+      color: #fff1c8;
+      background: var(--rpg-leather);
+      border: 2px solid var(--rpg-gold);
+      white-space: nowrap;
+      font: 700 .68rem Consolas, monospace;
+      letter-spacing: .08em;
+    }
+  </style>
+</head>
+<body class="retro-page rpg-page">
+  <a class="skip-link" href="#main">Lewati ke konten</a><div class="page-transition entering" aria-hidden="true"><div class="transition-mark">✦</div></div>
+  <header class="site-header"><nav class="container nav-wrap" aria-label="Navigasi utama"><a class="brand" href="index.html"><span class="brand-mark">EP</span><span>E-Portofolio</span></a><button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-links"><li><a href="index.html">Beranda</a></li><li><a href="profil.html">Profil</a></li><li><a href="analisis.html">Analisis</a></li><li><a class="active" href="artefak.html">Artefak</a></li><li><a href="refleksi.html">Refleksi</a></li><li><a href="filosofi.html">Filosofi</a></li><li><a href="model-guru.html">Model Guru</a></li><li><a href="lampiran.html">Lampiran</a></li></ul></nav></header>
+  <main id="main">
+    <section class="page-hero rpg-hero"><div class="container" data-reveal><div class="breadcrumbs"><a href="index.html">Beranda</a><span>/</span><span></span></div><span class="quest-label">✦ RESEARCH QUEST · SIKLUS 1–4</span><h1>Arsip Artefak<br>Setiap Siklus</h1><p class="lead">Perbaikan pembelajaran antar siklus.</p></div></section>
+    <section class="section artifact-query"><div class="container">
+      <div class="journal-intro" data-reveal><div class="journal-seal"></div><div><span class="eyebrow">Pilih Siklus</span><h2>Empat tahap perbaikan pembelajaran</h2><p class="lead">Pilih siklusnya atau scroll kebawah</p></div></div>
+      <div class="cycle-selector" id="cycleSelector" role="group" aria-label="Filter siklus PTK">
+        <button class="cycle-query-card active" type="button" data-cycle="1" aria-pressed="true"><span>01</span><strong>Siklus 1</strong><small>Identifikasi dan tindakan awal</small></button>
+      </div>
+    </div></section>
+    <section class="section cycle-content-section"><div class="container"><div id="cycleContent" aria-live="polite"></div></div></section>
+  </main>
+</body></html>
